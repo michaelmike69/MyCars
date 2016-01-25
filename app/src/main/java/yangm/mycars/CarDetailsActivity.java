@@ -30,7 +30,7 @@ public class CarDetailsActivity extends AppCompatActivity {
 
     }
 
-    //populate items to the labels (set the text on labels)
+    //loadCar items to the labels (set the text on labels)
     public void populator(Car car){
         TextView lblDataMake = (TextView)findViewById(R.id.lblDataMake);
         lblDataMake.setText(car.getMake());

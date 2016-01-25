@@ -2,11 +2,8 @@ package yangm.mycars;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.EditText;
 
 public class CarEditActivity extends AppCompatActivity {
@@ -35,10 +32,10 @@ public class CarEditActivity extends AppCompatActivity {
                 dm.getCarList().add(car);
             }
         }
-        populate(car);
+        loadCar(car);
     }
 
-    public void populate(Car car) {
+    public void loadCar(Car car) {
         EditText txtDataMake = (EditText) findViewById(R.id.txtDataMake);
         txtDataMake.setText(car.getMake());
         EditText txtDataYear = (EditText) findViewById(R.id.txtDataYear);
@@ -47,6 +44,17 @@ public class CarEditActivity extends AppCompatActivity {
         txtDataModel.setText(car.getModel());
         //EditText txtDataOrigin = (EditText)findViewById(R.id.txtDataOrigin);
         //txtDataOrigin.setText(car.getOrigin());
+
+
+    }
+
+    public void save(){
+        EditText txtDataMake = (EditText)findViewById(R.id.txtDataMake);
+        car.setMake(String.valueOf(txtDataMake.getText()));
+        EditText txtDataYear = (EditText)findViewById(R.id.txtDataYear);
+        car.setYear(Integer.parseInt(String.valueOf(txtDataYear.getText())));
+        EditText txtDataModel = (EditText)findViewById(R.id.txtDataModel);
+        car.setModel(String.valueOf(txtDataModel.getText()));
 
 
     }
