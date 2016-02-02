@@ -9,6 +9,7 @@ public class DataManager {
 
     private static DataManager dm;
     private ArrayList<Car> carList;
+    private int addCarId;
 
     private DataManager() {
         carList = new ArrayList<>();
@@ -22,5 +23,17 @@ public class DataManager {
 
     public ArrayList<Car> getCarList() {
         return carList;
+    }
+
+    public Car getCar(int carId){
+        int i = 0;
+        int bounds = carList.size();
+        while(carList.get(i).getCarId() != carId) {
+            i++;
+            if(i >= bounds){
+                return null;
+            }
+        }
+        return carList.get(i);
     }
 }

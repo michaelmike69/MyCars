@@ -17,6 +17,7 @@ public class CarDetailsActivity extends AppCompatActivity {
     private DataManager dm = DataManager.getDataManager();
     private Car car = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +32,20 @@ public class CarDetailsActivity extends AppCompatActivity {
     }
 
     //loadCar items to the labels (set the text on labels)
-    public void populator(Car car){
-        TextView lblDataMake = (TextView)findViewById(R.id.lblDataMake);
+    public void populator(Car car) {
+        TextView lblDataMake = (TextView) findViewById(R.id.lblDataMake);
         lblDataMake.setText(car.getMake());
-        TextView lblDataYear = (TextView)findViewById(R.id.lblDataYear);
+        TextView lblDataYear = (TextView) findViewById(R.id.lblDataYear);
         lblDataYear.setText(String.valueOf(car.getYear()));
-        TextView lblDataModel = (TextView)findViewById(R.id.lblDataModel);
+        TextView lblDataModel = (TextView) findViewById(R.id.lblDataModel);
         lblDataModel.setText(car.getModel());
-        TextView lblDataOrigin = (TextView)findViewById(R.id.lblDataOrigin);
+        TextView lblDataOrigin = (TextView) findViewById(R.id.lblDataOrigin);
         lblDataOrigin.setText(car.getOrigin());
 
 
     }
 
-    public void btnEditOnClick(View view){
+    public void btnEditOnClick(View view) {
         Intent intent = new Intent(this, CarEditActivity.class);
         intent.putExtra(EXTRA_CAR_ID, car.getCarId());
         startActivityForResult(intent, CarEditActivity.EDIT_CAR_REQUEST);
@@ -73,3 +74,16 @@ public class CarDetailsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == CarEditActivity.EDIT_CAR_REQUEST){
+//            if(resultCode == RESULT_OK){
+//                if(data.hasExtra(EXTRA_CAR_ID)){
+//                    car = dm.getCar(data.getIntExtra(EXTRA_CAR_ID))-1;
+//                }
+//            }
+//        }
+//    }
+//}
