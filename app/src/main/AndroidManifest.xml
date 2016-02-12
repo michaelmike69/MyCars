@@ -11,14 +11,6 @@
         <activity
             android:name=".CarDetailsActivity"
             android:label="@string/title_activity_car_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".CarEditActivity"
-            android:label="@string/title_activity_car_edit"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".CarListActivity"
-            android:label="@string/title_activity_car_list"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PreferencesActivity"
-            android:label="@string/title_activity_preferences"
+            android:name=".CarEditActivity"
+            android:label="@string/title_activity_car_edit"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

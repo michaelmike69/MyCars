@@ -1,23 +1,18 @@
 package yangm.mycars;
 
-import android.graphics.Bitmap;
-
 /**
  * Created by Michael on 1/21/2016.
  */
 public class Car implements Comparable<Car> {
-
     private String make;
     private int year;
     private String model;
     private String origin;
+    private static int count;
     private int carId;
-    private Bitmap photo;
-    public static boolean listYear;
-    public static boolean listMake;
 
     public Car() {
-        //carId = count++;
+        carId = count++;
 
     }
 
@@ -26,24 +21,7 @@ public class Car implements Comparable<Car> {
         this.year = year;
         this.model = model;
         this.origin = origin;
-        //carId = count++;
-    }
-    public static Car getTestCar(){
-        Car p = new Car();
-        p.carId = 0;
-        p.make = "Toyota";
-        p.year = 1986;
-        p.model = "Cressida";
-        p.origin = "Japanese";
-        return p;
-    }
-
-   /* public int getCarId() {
-        return carId;
-    }
-
-    public void setCarId(int carId) {
-        this.carId = carId;
+        carId = count++;
     }
 
     public String getMake() {
@@ -76,28 +54,31 @@ public class Car implements Comparable<Car> {
 
     public void setOrigin(String origin) {
         this.origin = origin;
-    }*/
+    }
 
-
+    public static Car getTestCar(){
+        Car car = new Car("Toyota", 1986, "Cressida", "Japanese");
+        return car;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Car other = (Car) o;
-        return (carId == other.carId);
-/*
+
+        Car car = (Car) o;
+
         if (year != car.year) return false;
         if (carId != car.carId) return false;
         if (make != null ? !make.equals(car.make) : car.make != null) return false;
         if (model != null ? !model.equals(car.model) : car.model != null) return false;
-        return !(origin != null ? !origin.equals(car.origin) : car.origin != null);*/
+        return !(origin != null ? !origin.equals(car.origin) : car.origin != null);
 
     }
 
     @Override
     public int hashCode() {
-        int result = make.hashCode();
+        int result = make != null ? make.hashCode() : 0;
         result = 31 * result + year;
         result = 31 * result + (model != null ? model.hashCode() : 0);
         result = 31 * result + (origin != null ? origin.hashCode() : 0);
@@ -112,7 +93,7 @@ public class Car implements Comparable<Car> {
 
     @Override
     public int compareTo(Car another) {
-        return this.toString().compareTo(another.toString());
+        return this.make.compareTo(another.make);
     }
 
     public int getCarId() {
@@ -121,37 +102,5 @@ public class Car implements Comparable<Car> {
 
     public void setCarId(int carId) {
         this.carId = carId;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
     }
 }

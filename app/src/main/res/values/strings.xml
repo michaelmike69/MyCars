@@ -1,44 +1,22 @@
 <resources>
-    <!-- Car Details -->
-    <string name="app_name">MyCars</string>
-    <string name="title_activity_car_details">Car Details</string>
-    <string name="action_settings">Settings</string>
-    <string name="lblCaptionMakeStr">Make:</string>
-    <string name="lblCaptionYearStr">Year:</string>
-    <string name="lblCaptionModelStr">Model:</string>
-    <string name="lblCaptionOriginStr">Origin:</string>
-    <string name="spnOriginStr">Edit</string>
-    <string name="spnOriginAmericanStr">American</string>
-    <string name="spnOriginJapaneseStr">Japanese</string>
-    <string name="spnOriginEuropeanStr">European</string>
-    <string name="btnModsStr">Mods</string>
-    <string name="btnWishlistStr">Wishlist</string>
-    <string name="btnEditStr">Edit</string>
-    <string-array name="spnOriginArr">
-        <item>@string/spnOriginAmericanStr</item>
-        <item>@string/spnOriginJapaneseStr</item>
-        <item>@string/spnOriginEuropeanStr</item>
-    </string-array>
-
-    <!-- Car Edit -->
-    <string name="title_activity_car_edit">Car Edit</string>
-    <string name="btnApplyStr">Apply</string>
-
-
-    <!-- Car List -->
-    <string name="title_activity_car_list">Car List</string>
-    <string name="btnAddStr">Add</string>
-    <string name="btnDeleteStr">Delete</string>
-    <string name="descFind">find</string>
-
-    <!-- Preferences -->
-    <string name="title_activity_preferences">Preferences</string>
-    <string name="lblListOptionsPromptStr">When listing cars, include:</string>
-    <string name="chkYearStr">Year</string>
-    <string name="chkMakeStr">Make</string>
-    <string name="lblSortPromptStr">Sort cars:</string>
-    <string name="rbtnAZStr">A-Z</string>
-    <string name="rbtnZAStr">Z-A</string>
-    <string name="lblNotifyPromptStr">Notifications:</string>
-    <string name="chkWarnDeleteStr">warn before deleting a cars</string>
+<string name="app_name">MyCars</string>
+<string name="title_activity_car_details">Car Details</string>
+<string name="title_activity_car_edit">Edit Car Details</string>
+<string name="action_settings">Settings</string>
+<string name="lblCaptionMakeStr">Make:</string>
+<string name="lblCaptionYearStr">Year:</string>
+<string name="lblCaptionModelStr">Model:</string>
+<string name="lblCaptionOriginStr">Origin:</string>
+<string name="spnOriginStr">Edit</string>
+<string name="spnOriginAmericanStr">American</string>
+<string name="spnOriginJapaneseStr">Japanese</string>
+<string name="spnOriginEuropeanStr">European</string>
+<string name="btnModsStr">Mods</string>
+<string name="btnWishlistStr">Wishlist</string>
+<string name="btnEditStr">EDIT</string>
+<string-array name="spnOriginArr">
+    <item>@string/spnOriginAmericanStr</item>
+    <item>@string/spnOriginJapaneseStr</item>
+    <item>@string/spnOriginEuropeanStr</item>
+</string-array>
 </resources>
