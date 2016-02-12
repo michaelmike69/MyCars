@@ -12,11 +12,22 @@
     tools:context="yangm.mycars.CarDetailsActivity"
     tools:showIn="@layout/activity_car_details">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="165dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="@dimen/linear_vertical_padding_top">
+        android:layout_height="fill_parent"
+        android:paddingTop="@dimen/linear_vertical_padding_top"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/imageView">
 
         <!--Make-->
         <LinearLayout
@@ -82,6 +93,7 @@
         </LinearLayout>
 
         <!--Origin-->
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -105,14 +117,6 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnEdit"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/btnEditStr"
-            android:onClick="btnEditOnClick" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/btnModsStr"
             android:id="@+id/btnMods"
             android:layout_gravity="center_horizontal" />
@@ -124,6 +128,24 @@
             android:id="@+id/btnWishlist"
             android:layout_gravity="center_horizontal" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEdit"
+            android:layout_gravity="right"
+            android:layout_weight="0.15"
+            android:onClick="btnOptionOnClick"
+            android:src="@drawable/ic_pencil_grey600_36dp" />
     </LinearLayout>
 
 </RelativeLayout>
