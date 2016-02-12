@@ -17,6 +17,37 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import android.net.Uri;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MenuInflater;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.Indicators.PagerIndicator;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.daimajia.slider.library.Tricks.ViewPagerEx;
+
+import java.util.HashMap;
+
+public interface AppCompatActivity {
+    private int carId;
+    private DataManager dm;
+    private Car thisCar;
+    private PreferencesManager pm;
+}
+
+public interface ActionBarActivity {
+    private SliderLayout mDemoSlider;
+}
+
+public class AppCompatActivity implements
+
+
 public class CarDetailsActivity extends AppCompatActivity {
     //global variables can be accessed throughout activity
     private int carId;
